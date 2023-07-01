@@ -1,6 +1,37 @@
-# backlink_click_url
+## Backlink Klik URL
 
 Repository ini berisi kode Python untuk mengklik tautan (link) pada halaman web menggunakan Selenium. Kode ini dapat membantu Anda secara otomatis mengklik tautan dengan kata kunci tertentu pada halaman web yang ditentukan.
+
+## *Requirement*
+
+* Python 3.9
+* openpyxl
+* selenium
+* Chrome WebDriver (sesuai dengan versi browser Chrome Anda)
+
+## Fitur
+
+* Mode *Headless*
+
+## *Installation*
+
+Via Git
+
+``` git clone https://github.com/dzulfikarsa/backlink_click_url ```
+
+## *Download ZIP*
+
+[Link](https://github.com/dzulfikarsa/backlink_click_url/archive/refs/heads/main.zip)
+
+Buka terminal atau *command prompt*
+Arahkan ke direktori *project* dengan menjalankan perintah berikut :
+
+``` cd backlink_click_url ```
+
+Install requirement 
+
+``` pip install -r requirements.txt ```
+
 
 ## Penggunaan
 
