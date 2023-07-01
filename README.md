@@ -5,13 +5,16 @@ Repository ini berisi kode Python untuk mengklik tautan (link) pada halaman web 
 ## Penggunaan
 
 1. Pastikan Anda telah menginstal Python di komputer Anda.
-2. Instal library yang diperlukan dengan menjalankan perintah berikut di terminal atau command prompt:
+2. Instal library yang diperlukan dengan menjalankan perintah berikut di terminal atau command prompt :
+
    ```pip install openpyxl selenium```
-3. Unduh file backlink_click_url.py dari repository ini.
-4. Ubah nilai variabel file_path dengan path file Excel yang berisi URL yang ingin diklik.
-5. Ubah nilai variabel url_column dengan nama kolom yang berisi URL pada file Excel.
-6. Ubah daftar anchor_text_list sesuai dengan kata kunci tautan yang ingin Anda klik.
-7. Jalankan skrip Python dengan menjalankan perintah berikut di terminal atau command prompt:
+   
+4. Unduh file backlink_click_url.py dari repository ini.
+5. Ubah nilai variabel file_path dengan path file Excel yang berisi URL yang ingin diklik.
+6. Ubah nilai variabel url_column dengan nama kolom yang berisi URL pada file Excel.
+7. Ubah daftar anchor_text_list sesuai dengan kata kunci tautan yang ingin Anda klik.
+8. Jalankan skrip Python dengan menjalankan perintah berikut di terminal atau command prompt :
+   
    ```python backlink_click_url.py```
    
 Script akan membuka browser dalam mode headless (tanpa tampilan grafis) dan mengklik tautan yang sesuai dengan kata kunci yang telah Anda tentukan. Hasil dari klik tautan akan ditulis ke dalam file report.txt. Jika tautan tidak ditemukan atau gagal diklik, URL tersebut akan ditulis ke dalam file report_gagal.txt.
