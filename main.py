@@ -5,16 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-def click_link(url, anchor_text_list):
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")  # Menjalankan Chrome dalam mode latar belakang
-    driver = webdriver.Chrome(options=chrome_options)  # Ganti dengan driver yang sesuai (misalnya Firefox)
-
-    if chrome_options.headless:
-        print("Program berjalan dalam mode headless")
-    else:
-        print("Program berjalan dengan tampilan grafis")
-        
+def click_link(driver, url, anchor_text_list):
     driver.get(url)
 
     try:
@@ -36,8 +27,6 @@ def click_link(url, anchor_text_list):
         print(f"Gagal menemukan atau mengklik tautan di URL: {url}")
         write_to_report_gagal(url)
 
-    driver.quit()
-
 def write_to_report(url):
     with open("file/report.txt", "a") as file:
         file.write(f"{url}\n")
@@ -47,6 +36,15 @@ def write_to_report_gagal(url):
         file.write(f"{url}\n")
 
 def process_excel(file_path, url_column):
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")  # Menjalankan Chrome dalam mode latar belakang
+    driver = webdriver.Chrome(options=chrome_options)  # Ganti dengan driver yang sesuai (misalnya Firefox)
+
+    if chrome_options.headless:
+        print("Program berjalan dalam mode headless")
+    else:
+        print("Program berjalan dengan tampilan grafis")
+
     workbook = openpyxl.load_workbook(file_path)
     sheet = workbook.active
 
@@ -74,9 +72,11 @@ def process_excel(file_path, url_column):
                 "budiluhur.ac.id",
                 "https://budiluhur.ac.id"
             ]
-            click_link(url, anchor_text_list)
+            click_link(driver, url, anchor_text_list)
         else:
             print(f"Indeks kolom '{url_column}' di luar jangkauan pada baris: {row}")
+
+    driver.quit()
 
 # Ubah file_path ke path file Excel yang sesuai
 file_path = 'file/dataset.xlsx'
