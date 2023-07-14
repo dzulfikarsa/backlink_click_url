@@ -53,6 +53,6 @@ Install requirement
 Skrip akan membuka browser dalam mode headless dan mengklik tautan yang sesuai dengan kata kunci yang telah Anda tentukan. Hasil dari klik tautan akan ditulis ke dalam file Excel output.
 
 ## Tambahan
-Dalam repository ini, saya juga menyertakan file dataset.xlsx yang merupakan contoh file Excel dengan data URL untuk diuji. Anda dapat menggunakan file ini untuk mencoba skrip dengan cepat. Selain itu, skrip ini juga menggunakan Selenium untuk mengendalikan browser dan melakukan klik tautan secara otomatis.
+Dalam repository ini, saya juga menyertakan file Link V1_24.xlsx yang merupakan contoh file Excel dengan data URL untuk diuji. Anda dapat menggunakan file ini untuk mencoba skrip dengan cepat. Selain itu, skrip ini juga menggunakan Selenium untuk mengendalikan browser dan melakukan klik tautan secara otomatis.
 
 Selamat mencoba! Jika Anda memiliki pertanyaan atau masalah, jangan ragu untuk mengajukan pertanyaan atau membuat issue di repository ini. Terima kasih!
