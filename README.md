@@ -6,6 +6,8 @@ Repository ini berisi kode Python untuk mengklik tautan (link) pada halaman web 
 
 * Python 3.9
 * openpyxl
+* requests
+* BeautifulSoup
 * selenium
 * Chrome WebDriver (sesuai dengan versi browser Chrome Anda)
 
@@ -38,7 +40,7 @@ Install requirement
 1. Pastikan Anda telah menginstal Python di komputer Anda.
 2. Instal library yang diperlukan dengan menjalankan perintah berikut di terminal atau command prompt :
 
-   ```pip install openpyxl selenium```
+   ```pip install openpyxl requests BeautifulSoup selenium```
    
 4. Unduh file backlink_click_url.py dari repository ini.
 5. Ubah nilai variabel file_path dengan path file Excel yang berisi URL yang ingin diklik.
@@ -48,7 +50,7 @@ Install requirement
    
    ```python backlink_click_url.py```
    
-Script akan membuka browser dalam mode headless (tanpa tampilan grafis) dan mengklik tautan yang sesuai dengan kata kunci yang telah Anda tentukan. Hasil dari klik tautan akan ditulis ke dalam file report.txt. Jika tautan tidak ditemukan atau gagal diklik, URL tersebut akan ditulis ke dalam file report_gagal.txt.
+Skrip akan membuka browser dalam mode headless dan mengklik tautan yang sesuai dengan kata kunci yang telah Anda tentukan. Hasil dari klik tautan akan ditulis ke dalam file Excel output.
 
 ## Tambahan
 Dalam repository ini, saya juga menyertakan file dataset.xlsx yang merupakan contoh file Excel dengan data URL untuk diuji. Anda dapat menggunakan file ini untuk mencoba skrip dengan cepat. Selain itu, skrip ini juga menggunakan Selenium untuk mengendalikan browser dan melakukan klik tautan secara otomatis.
